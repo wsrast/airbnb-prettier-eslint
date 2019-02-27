@@ -12,3 +12,9 @@ yarn add --dev eslint prettier husky lint-staged eslint-config-prettier eslint-
 npx install-peerdeps --dev eslint-config-airbnb
 ```
 (opt to use yarn for install)
+
+If you're adding this to a Yarn Workspace, use the following npx command instead.
+
+```
+npx install-peerdeps --dev eslint-config-airbnb --extra-deps -W
+```
