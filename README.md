@@ -13,7 +13,7 @@ reference: https://github.com/airbnb/javascript/tree/master/packages/eslint-con
 This new structure allows you to use a single command to do everything. The -Y flag will automatically choose Yarn as the package installer.
 
 ```
-npm install-peerdeps --dev -Y @wsrast/airbnb-prettier-eslint eslint-config-airbnb
+npx install-peerdeps --dev -Y @wsrast/airbnb-prettier-eslint
 ```
 
 ### Old, Cruddy Manual Way
