@@ -16,6 +16,18 @@ This new structure allows you to use a single command to do everything. The -Y f
 npx install-peerdeps --dev -Y @wsrast/airbnb-prettier-eslint
 ```
 
+If you want to pull the files using the command line, here's the curl:
+
+```
+curl -O --url https://raw.githubusercontent.com/wsrast/airbnb-prettier-eslint/master/files/{.editorconfig,.eslintrc.json,.prettierrc}
+```
+
+If you find yourself doing this a lot, I've included a handy \_curlrc file in the root folder that you can pull then use for a shorter command.
+
+```
+curl -K _curlrc
+```
+
 ### Old, Cruddy Manual Way
 
 ```
