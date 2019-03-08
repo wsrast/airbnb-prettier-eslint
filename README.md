@@ -7,6 +7,8 @@ This is a shortcut for bootstrapping the linting and coding standards on a new p
 1. Download all the peer dependencies listed in this package, which add Prettier and its helpers to the Airbnb ESLint tooling.
 2. Copies the .editorconfig, .eslintrc.json and .prettierrc files into your project's folder.
 
+*Warning: The current version of Yarn, 1.13, has a defect where it will not run postinstall scripts. That means that for now, you're better off using straight `npx` instead of using the `npx -Y` flag to use Yarn for the install. Once Yarn is fixed, the postinstall should work normally without any changes to this project. The downside of this is that Yarn workspace packages will have difficulty maintaining a rigorous structure if you use NPM as the installer; it won't hoist all the sub-package's dependencies into the workspace node_modules folder. Instead, it will leave them in the /packages/\<sub-package\>/node_modules folder, and it will also create a package-lock.json file that you'll need to delete.*
+
 ### New-Hotness Usage
 
 This new structure allows you to use a single command to do everything. The -Y flag will automatically choose Yarn as the package installer.
