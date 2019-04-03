@@ -19,6 +19,12 @@ fileNames.forEach(fileName => {
 	 * cwd, which means it's being installed, and not worked on. */
 	const relativePath = path.join(projRoot, fileName);
 
+	// TODO: check to see if there's already a file at this location!
+	//	if there is, then don't overwrite it. Very annoying to deal
+	//	with git changes!
+	// Maybe: this should check to see whether or not the contents
+	//	of the new file would be different, and if so, overwrite?
+
 	if (projRoot !== cwd) {
 		request(url).pipe(fs.createWriteStream(path.resolve(relativePath)));
 	}
